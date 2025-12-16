@@ -186,8 +186,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Try to load the GLB model
     const loader = new GLTFLoader();
+    const shakerUrl = new URL("./shaker.glb", import.meta.url).href;
+
     loader.load(
-        "/shaker.glb",
+        shakerUrl,
         (gltf) => {
             // Remove placeholder
             if (model) {
